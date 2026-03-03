@@ -5,7 +5,7 @@
 ```bash
 docker compose up --build
 
-2. Funkciók
+## 2. Funkciók
 Asset lista
 Pagination
 Keresés serial alapján
@@ -20,7 +20,7 @@ Note (opcionális)
 Szerkesztés
 Lista → Szerkesztés → Mentés
 
-3. Backend API
+## 3. Backend API
 
 Swagger:
 http://localhost:8080/swagger
