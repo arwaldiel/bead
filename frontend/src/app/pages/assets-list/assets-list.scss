@@ -1,0 +1,26 @@
+.page {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search {
+  flex: 1;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.actions {
+  text-align: right;
+  white-space: nowrap;
+}
