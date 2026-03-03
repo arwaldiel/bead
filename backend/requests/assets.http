@@ -1,0 +1,32 @@
+@id = 1234567890abcdef
+### Create
+POST http://localhost:5262/api/assets
+Content-Type: application/json
+
+{
+  "serialNumber": "ABC123",
+  "site": "Budapest",
+  "type": "Router",
+  "manufacturer": "Cisco",
+  "note": "Test asset"
+}
+
+### List
+GET http://localhost:5262/api/assets?page=1&pageSize=5
+
+### Get by id
+GET http://localhost:5262/api/assets/{{id}}
+
+### Update
+PUT http://localhost:5262/api/assets/{{id}}
+Content-Type: application/json
+
+{
+  "id": "{{id}}",
+  "serialNumber": "ABC123-UPDATED",
+  "site": "Debrecen",
+  "type": "Switch"
+}
+
+### Delete
+DELETE http://localhost:5262/api/assets/{{id}}

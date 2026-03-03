@@ -1,0 +1,26 @@
+services:
+  mongo:
+    image: mongo:8
+    container_name: mongo
+    ports:
+      - "27017:27017"
+
+  backend:
+    build: ./backend
+    container_name: backend
+    environment:
+      - Mongo__ConnectionString=mongodb://mongo:27017
+      - Mongo__Database=appdb
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
